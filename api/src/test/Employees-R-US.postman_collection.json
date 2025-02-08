@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "d7e35773-e357-4c44-b928-206b3fab4250",
+		"name": "Employees-R-US",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41828477"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"fullName\": \"John Doe\",\r\n  \"salary\": 50000,\r\n  \"age\": 30,\r\n  \"jobTitle\": \"Software Engineer\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"contractHireDate\": \"2023-01-01T00:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee By Uuid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employee/uuid=73a61fc8-211a-4fdb-8106-f51fd09c2c91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"uuid=73a61fc8-211a-4fdb-8106-f51fd09c2c91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
